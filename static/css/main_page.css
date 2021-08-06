@@ -21,14 +21,12 @@
     text-decoration: inherit;
     margin: 5px;
     font-size: 30px;
-    margin-right: 30px;
 }
 
 #del{
     text-decoration: inherit;
     margin: 5px;
     font-size: 30px;
-    margin-left: 30px;
 }
 
 #logout{
@@ -82,7 +80,7 @@
 
 #otherLink:hover{
     color: red;
-}
+} 
 
 @media screen and (max-width: 800px) {
     .buttonLinks{
