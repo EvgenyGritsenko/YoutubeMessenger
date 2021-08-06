@@ -1,0 +1,19 @@
+a{
+    text-decoration: none;
+}
+
+#text{
+    text-align: center;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+img{
+    margin-top: 100px;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

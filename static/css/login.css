@@ -1,0 +1,57 @@
+body{
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+#head{
+    color: red;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+#checkNick{
+    outline: none;
+    width: 500px;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+#checkPass{
+    outline: none;
+    text-align: center;
+    width: 500px;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+#submit{
+    font-size: 30px;
+    width: 500px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px black solid;
+    border-radius: 3px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+#submit:hover{
+    border: 2px black solid;
+}
+
+img{
+    margin-top: 80px;
+    width: 350px;
+}
+

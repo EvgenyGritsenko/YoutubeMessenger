@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обновление данных профиля</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upd_acc.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> <!-- all -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> <!-- buttons -->
+</head>
+<body>
+    
+    <div id="form">
+        <form method="POST" >
+            {{ form.hidden_tag() }}
+
+        {{ form.upd_nick(id="newNick", placeholder="Новый ник, текущий - '{0}'".format(current_user.nick)) }} <br>
+        <br>
+        {{ form.upd_password(id="newPass", placeholder="Новый пароль") }} <br>
+        <br>
+        {{ form.submit(id="submit") }}
+
+        </form>
+    </div>
+
+    <div id="flash">
+
+        <h3 id="errors" >Сообщения:</h3>
+
+            {% with messages = get_flashed_messages() %}
+
+                {% if messages %}
+
+                    {% for message in messages %}
+
+                        <h4> {{ message }} </h4>
+
+                    {% endfor %}
+
+
+                {% else %}
+                    <p>-----</p>
+
+                {% endif %}
+
+            {% endwith %}
+
+    </div>
+
+    <div id="info" >
+        <hr>
+        <h3 id="head" >Инструкция</h3>
+        <img src="{{ url_for('static', filename='images/down.png') }}" alt="">
+        <h5 id="infoText" >Если хочешь обновить данные своего аккаунта, введи новое значение в нужное поле. Если не хочешь менять данные просто ни
+                           чего не пиши в поля. Так-же смотри что написано в сообщениях, там будут подсказки
+        </h5>
+        <a id="backMain"  href="/">на главную</a>
+    </div>
+
+</body>
+</html>

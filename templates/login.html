@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="form">
+        <h2 id="head" >Авторизация на сайте</h2>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+
+            {{ form.check_nick(id="checkNick", placeholder="Введи ник") }} <br>
+            <br>
+            {{ form.check_pass(id="checkPass", placeholder="Введи пароль", type="password") }} <br>
+            <br>
+            {{ form.submit(id="submit") }}
+
+        </form>
+    </div>
+
+
+    {% for i in form %}
+
+        {% for error in i.erors %}
+
+            <h4 style="color: red">{{ error }}</h4>
+
+        {% endfor %}
+
+    {% endfor %}
+
+
+
+    {% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+        {% for message in messages %}
+
+            <h4> {{ message }} </h4>
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% endwith %}
+    
+    <img src="{{ url_for('static', filename='images/login.png') }}" alt="">
+    <br>
+    <h5 style="margin-top: 30px;"> Нет аккаунта? <a style="text-decoration: none;" href="/registration">Зарегистрируйся</a> </h5>
+
+</body>
+</html>

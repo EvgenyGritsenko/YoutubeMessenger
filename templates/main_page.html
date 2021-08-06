@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grits Messenger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_page.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet"> <!-- nick -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet"> <!-- links -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet"> <!-- #goChat -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- #other -->
+</head>
+<body>
+    
+    <div class="data">
+
+        <a id="linkNick" href="/info_user/{{ current_user.id }}"> <h2 id="userNick" >{{ current_user.nick}} ({{ current_user.id }})</h2> </a>
+
+        <div class="buttonLinks">
+            <a id="upd" type="button" href="/update_acc/{{current_user.id}}">Обновить данные</a>
+            <a id="logout" type="button" href="/logout_user">Выйти с аккаунта</a>
+            <a id="del" type="button" href="/delete_acc/{{current_user.id}}">Удалить аккаунт</a>
+        </div>
+
+        <div class="chat">
+
+            <a id="goChat" type="button" href="/chat">ПЕРЕЙТИ В ЧАТ</a>
+
+        </div>
+
+    </div>
+
+    <div id="other">
+
+        <h1 id="head" >ПРОЧЕЕ:</h1>
+        <a id="otherLink" href="/info_users">-Поиск аккантов</a> <br>
+        <a id="otherLink" href="/support">-Вопрос создателю (в разработке)</a> <br>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр всех аккаунтов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="main">
+
+
+            <h2 id="head">Все пользователи сайта<h1 id="len" style="font-size: 40px;" > ( всего: {{ all|length }} )</h1> </h2>
+
+            <hr>
+
+        {% for i in all %}
+
+            {% if i.admin == True %}
+            <a style="color:red;" id="user" href="/info_user/{{ i.id }}">{{ i.nick }} (id: {{ i.id }}, Admin)</a> <br>
+
+
+            {% else %}
+
+                <a id="user" href="/info_user/{{ i.id }}">{{ i.nick }} (id: {{ i.id }})</a> <br>
+
+
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+
+    <a id="link" href="/">На главную</a>
+
+</body>
+</html>

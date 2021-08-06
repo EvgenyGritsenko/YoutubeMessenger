@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Удаление аккаунта</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/del_acc.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="flash" >
+
+        <h3 id="errors" >Сообщения:</h3>
+
+        {% with messages = get_flashed_messages() %}
+
+            {% if messages %}
+
+                {% for message in messages %}
+
+                    <h4 id="mes" > {{ message }} </h4>
+
+                {% endfor %}
+
+
+            {% else %}
+                <p>-----</p>
+
+            {% endif %}
+
+        {% endwith %}
+
+        <a style="margin-right: 20px; text-decoration: none;" href="/registration">Регистрация</a> <a style="margin-left: 20px; text-decoration: none;" href="/login">Вход</a>
+
+    </div>
+
+</body>
+</html>

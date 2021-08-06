@@ -1,0 +1,101 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    text-align: center;
+}
+
+#form{
+    border: 2px red solid;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#newNick{
+    width: 500px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    border: 1px black solid;
+}  
+
+#newPass{
+    width: 500px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    border: 1px black solid;
+}
+
+#submit{
+    margin-top: 15px;
+    width: 300px;
+    height: 30px;
+}
+
+#head{
+    font-size: 30px;
+
+}
+
+#infoText{
+    font-size: 20px;
+}
+
+img{
+    width: 100px;
+}
+
+#backMain{
+    text-decoration: none;
+    font-size: 30px;
+    color: red;
+    padding: 5px;
+}
+
+#backMain:hover {
+    border: 2px red solid;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 770px) {
+    #newNick{
+        width: 400px;
+        font-size: 17px;
+    }
+    #newPass{
+        width: 400px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #newNick{
+        width: 300px;
+        font-size: 15px;
+    }
+    #newPass{
+        width: 300px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #newNick{
+        width: 250px;
+        font-size: 15px;
+    }
+    #newPass{
+        width: 250px;
+        font-size: 15px;
+    }
+    #submit{
+        width: 200px;
+    }
+}

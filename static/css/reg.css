@@ -1,0 +1,57 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#reg{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+}
+
+#head{
+    font-size: 50px;
+    color: red;
+    margin-bottom: 50px;
+}
+
+#nick{
+    outline: none;
+    width: 500px;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 5px;
+    border: 1px black solid;
+    margin-bottom: 20px;
+}
+
+#pass{
+    outline: none;
+    width: 500px;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 5px;
+    border: 1px black solid;
+    margin-bottom: 50px;
+}
+
+#submit{
+    font-size: 30px;
+    width: 500px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px black solid;
+    border-radius: 3px;
+    height: 50px;
+}
+
+#submit:hover{
+    border: 2px black solid;
+}
+
+img{
+    width: 500px;
+}

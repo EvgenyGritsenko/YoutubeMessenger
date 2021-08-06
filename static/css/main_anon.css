@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+    font-style: italic;
+    color: red;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#links{
+    margin-top: 50px;
+    font-style: 30px;
+}
+
+#log{
+    font-style: normal;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+#reg{
+    font-style: normal;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+img{
+    margin-top: 50px;
+    width: 500px;
+}

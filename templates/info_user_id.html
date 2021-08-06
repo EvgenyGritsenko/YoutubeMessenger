@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробная информация о '{{ user.nick }}'</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/info_user_id.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="main">
+
+        <h1>Подробная информация об аккаунте - '{{ user.nick }}'</h1>
+
+
+        <div id="all_info">
+            <h3 id="info" >ID: {{ user.id }}</h3>
+            <h3 id="info" >Дата регистрации: <br>Год: {{ date.year }} <br>Месяц: {{ date.month }} <br>День: {{ date.day }} <hr> 
+                           Час: {{ time.hour }} <br>Минута: {{ time.minute }} <br>Секунда: {{ time.second }}
+            </h3>
+            {% if user.is_authenticated %}
+
+                <h3 id="info" >Пользователь аутентифицирован</h3>
+
+            {% else %}
+                <h3 id="info" >Пользователь не аутентифицирован</h3>
+
+            {% endif %}
+            
+            {% if user.admin == True %}
+
+                <h3 id="info" >Статус: Админ <br> должность: Засекречено </h3>
+                {% else %}
+                <h3 id="info" >Статус: Пользователь</h3>
+
+            {% endif %}
+
+        
+        </div>
+
+    </div>
+
+    <a id="link" href="/">На главную</a>
+
+</body>
+</html>

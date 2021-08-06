@@ -1,0 +1,41 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#head{
+    font-size: 50px;
+}
+
+#main{
+    padding-top: 20px;
+}
+
+#user{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#link{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+

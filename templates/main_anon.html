@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_anon.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <h1 id="mainText" >Привет! Это мессенджер от <a target="_blank" href="https://t.me/evgenygritsenko">меня</a> (хотя сейчас это просто общий чат)</h1>
+
+        <h3>Коротко о мессенджере: ты регистрируешься и переписываешься с другими в чате! Твои сообщения выделяются # цветом <br>
+            а дугие # . Так как автор этого творения сделал все на чистом python, тебе нужно обновлять страницу что-бы увидеть <br>
+            другие сообщения, но я о тебе позаботился и создал специальную кнопку для перезагрузки страницы
+        
+        </h3>
+    
+        <div id="links">
+
+            <a id="log" href="/login">Вход в аккаунт</a>
+            <a id="reg" href="/registration">Регистрация</a>
+
+        </div>
+
+        <img src="{{ url_for('static', filename='images/hello.png') }}" alt="">
+
+    </div>
+    
+</body>
+</html>
