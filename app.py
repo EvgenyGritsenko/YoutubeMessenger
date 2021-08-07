@@ -4,7 +4,7 @@ from flask_script import Manager
 from forms import UserForm, LoginForm, UpdateForm, ChatForm
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_migrate import Migrate, MigrateCommand
+from flask_migrate import Migrate #, MigrateCommand
 from flask_login import LoginManager, UserMixin, current_user, login_manager, login_user, logout_user, login_required
 from threading import *
 
@@ -16,7 +16,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 manager = Manager(app)
 migrate = Migrate(app, db)
-manager.add_command("db", MigrateCommand)
+#manager.add_command("db", MigrateCommand)
 login_manager = LoginManager(app)
 
 @login_manager.user_loader
