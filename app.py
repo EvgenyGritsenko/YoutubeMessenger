@@ -83,7 +83,7 @@ def UpdateAcc(id):
 			new_pass = form.upd_password.data
 
 			if new_nick:
-				if current_user.nick not in all_nicks:
+				if form.upd_nick.data not in all_nicks:
 					
 					if len(new_nick) >= 4:
 						if len(new_nick) <= 16:
