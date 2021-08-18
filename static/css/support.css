@@ -1,0 +1,147 @@
+#form{
+    font-family: 'Roboto', sans-serif;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+#info{
+    font-family: 'Roboto', sans-serif;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#sender{
+    outline: none;
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+}
+
+#message{
+    outline: none;
+    resize: none;
+    width: 700px;
+    height: 200px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+#hMail{
+    margin-top: 30px;
+    font-size: 30px;
+    color: red;
+}
+
+#hMessahe{
+    margin-top: 30px;
+    font-size: 30px;
+    color: red;
+}
+
+#submit{
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#link{
+    text-decoration: none;
+    font-size: 30px;
+    color: red;
+    padding: 5px;
+}
+
+#link:hover {
+    border: 2px red solid;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 985px) {
+    #info{
+        width: 800px;
+    }
+    #form{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #info{
+        width: 600px;
+    }
+    #form{
+        width: 600px;
+    }
+    #message{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #info{
+        width: 450px;
+    }
+    #form{
+        width: 450px;
+    }
+    #message{
+        width: 450px;
+    }
+    #info{
+        font-size: 20px;
+    }
+    #submit{
+        width: 200px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #info{
+        width: 400px;
+    }
+    #form{
+        width: 400px;
+    }
+    #message{
+        width: 400px;
+    }
+    #info{
+        font-size: 15px;
+    }
+    #submit{
+        width: 200px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #info{
+        width: 320px;
+        font-size: 15px;
+    }
+    #form{
+        width: 320px;
+        font-size: 10px;
+    }
+    #message{
+        width: 320px;
+        margin-bottom: 15px;
+    }
+    #info{
+        font-size: 15px;
+    }
+    #submit{
+        width: 150px;
+        font-size: 12px;
+    }
+    #sender{
+        width: 320px;
+        font-size: 15px;
+    }
+}

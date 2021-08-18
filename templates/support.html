@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/support.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="info" >Если хочешь что-либо написать лично создателю, то пиши сюда, сообщение отправится ему на почту</h1>
+  
+    <div>
+
+        <form id="form" method="POST">
+            {{ form.hidden_tag() }}
+
+            <h3 id="hMail">Введи свою почту 🠗</h3>
+            {{ form.sender(id="sender", placeholder="Вводи корректную, для обратной связи") }} <br>
+            <h3 id="hMessahe">Сообщение создателю 🠗</h3>
+            {{ form.message(id="message", placeholder="Текст сообщения...") }} <br>
+
+            {% with messages = get_flashed_messages() %}
+
+            {% if messages %}
+        
+                {% for message in messages %}
+        
+                    <h4> {{ message }} </h4>
+        
+                {% endfor %}
+        
+            {% endif %}
+        
+            {% endwith %}
+
+            {{ form.submit(id="submit") }}
+            <br>
+            <a id="link" href="/">на главную</a>
+        </form>
+
+    </div>
+    
+</body>
+</html>

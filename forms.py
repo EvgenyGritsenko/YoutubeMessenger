@@ -26,3 +26,9 @@ class UpdateForm(FlaskForm):
 class ChatForm(FlaskForm):
     message = TextAreaField("Текст сообщения", validators=[DataRequired()])
     submit = SubmitField("Отправить сообщение")
+
+
+class MailForm(FlaskForm):
+    sender = StringField("Отправитель", validators=[Email()])
+    message = TextAreaField("Текст сообщения", validators=[DataRequired()])
+    submit = SubmitField("Отправить сообщение")

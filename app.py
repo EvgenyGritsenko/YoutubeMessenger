@@ -1,12 +1,14 @@
+from operator import methodcaller
 from flask import Flask, render_template, url_for, redirect, flash, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_script import Manager
-from forms import UserForm, LoginForm, UpdateForm, ChatForm
+from forms import UserForm, LoginForm, UpdateForm, ChatForm, MailForm
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_migrate import Migrate #, MigrateCommand
 from flask_login import LoginManager, UserMixin, current_user, login_manager, login_user, logout_user, login_required
-from threading import *
+from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
 app.debug = True
@@ -18,6 +20,13 @@ manager = Manager(app)
 migrate = Migrate(app, db)
 #manager.add_command("db", MigrateCommand)
 login_manager = LoginManager(app)
+app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'gritsenko.cooperation@gmail.com' # поменяй на свою
+app.config['MAIL_DEFAULT_SENDER'] = 'gritsenko.cooperation@gmail.com' # тоже поменяй
+app.config['MAIL_PASSWORD'] = 'Your password' or os.getenv('MAIL_PASS')
+mail = Mail(app)
 
 @login_manager.user_loader
 def load_user(id):
@@ -49,6 +58,18 @@ def infoUserId(id):
 
 	return render_template("info_user_id.html", user=user, date=date, time=time)
 
+
+@app.route("/support/", methods=['POST', 'GET'])
+def Support():
+	form = MailForm()
+
+	if form.validate_on_submit():
+		msg = Message("Grits Messenger Support", recipients=["gritsenkoevg@yandex.kz"])
+		msg.body = f""" Пользователь ({form.sender.data}), отправил сообщение. Содержание: \n\n {form.message.data}"""
+		mail.send(msg)
+		flash("Сообщение успешно отправлено!")
+
+	return render_template("support.html", form=form)
 
 @app.route("/info_users/")
 def infoUser():
