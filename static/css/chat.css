@@ -91,7 +91,7 @@
     padding: 10px;
     background-color: red;
     border-radius: 10px;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     margin-left: 10px;
@@ -170,5 +170,21 @@
         width: 170px;
         height: 35px;
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #link{
+        width: 70px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-height: 730px){
+    #link{
+        position: absolute;
+        top: 0px;
+        height: 15px;
+        margin-top: 30px;
     }
 }
